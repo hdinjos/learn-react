@@ -2,19 +2,29 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { HashRouter } from "react-router-dom";
+import "./styles/App.scss";
+import "./styles/layout/flags/flags.css";
+import "./styles/layout/layout.scss";
 //for primereact
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
+import PrimeReact from "primereact/api";
 import { locale } from "primereact/api";
 
-//set defualut locale
+//set default locale
 locale("id");
+
+// active ripple effect
+PrimeReact.ripple = true;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
