@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./page/home";
 import About from "./page/about";
@@ -6,10 +5,6 @@ import About from "./page/about";
 function App() {
   return (
     <Router>
-      {/* <Link to="/">Home</Link>
-        <span> </span>
-        <Link to="/about">About</Link>
-        <hr /> */}
       <Link to="/about">About</Link>
       <hr />
       <Switch>
