@@ -7,6 +7,10 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
+import { locale } from "primereact/api";
+
+//set defualut locale
+locale("id");
 
 ReactDOM.render(
   <React.StrictMode>
