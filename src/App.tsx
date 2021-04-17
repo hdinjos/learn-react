@@ -6,6 +6,12 @@ import About from "./page/about";
 function App() {
   return (
     <Router>
+      {/* <Link to="/">Home</Link>
+        <span> </span>
+        <Link to="/about">About</Link>
+        <hr /> */}
+      <Link to="/about">About</Link>
+      <hr />
       <Switch>
         <Route exact path="/">
           <Home />
