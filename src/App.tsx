@@ -43,6 +43,14 @@ function App() {
     setName((state) => [...state, { name: val, age: 20 }]);
   };
 
+  const deleteName = (index: number) => {
+    if (name.length === 0) {
+      alert("tidak bisa dihapus, data sudah kosong");
+    } else {
+      setName((state) => [...state.slice(0, index), ...state.slice(index + 1)]);
+    }
+  };
+
   const style = {
     button: {
       paddingTop: "10px",
@@ -54,7 +62,9 @@ function App() {
       width: "300px",
       fontWeight: 900,
       paddingLeft: "50px",
-      // paddingRight: "20px",
+    },
+    btnDel: {
+      marginLeft: "20px",
     },
   };
 
@@ -76,6 +86,9 @@ function App() {
           // <div key={i}>{item.age ? <p>Muncul</p> : <p>Tidak Muncul</p>}</div>
           <div style={style.listName} key={i}>
             {item.name}
+            <button style={style.btnDel} onClick={() => deleteName(i)}>
+              Hapus Nama
+            </button>
           </div>
         );
       })}
