@@ -52,9 +52,16 @@ function Index() {
 
   return (
     <div>
-      <Toolbar left={leftContents} right={rightContents} />
+      {[...Array(20)].map((item, i) => (
+        <p key={i}>Helo world</p>
+      ))}
+      <ComponentA />
     </div>
   );
+}
+
+function ComponentA() {
+  return <p>Halo dunia</p>;
 }
 
 export default Index;

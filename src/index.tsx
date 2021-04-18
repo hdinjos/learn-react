@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import ScrollToTop from "./utils/ScrollToTop";
 import "./styles/App.scss";
 import "./styles/layout/flags/flags.css";
 import "./styles/layout/layout.scss";
@@ -22,9 +23,11 @@ PrimeReact.ripple = true;
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <Router>
+      <ScrollToTop>
+        <App />
+      </ScrollToTop>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );

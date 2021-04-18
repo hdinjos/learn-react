@@ -67,6 +67,15 @@ function Basic() {
       marginLeft: "20px",
     },
   };
+  //###list rendering inline
+  const ArrJos = () => {
+    // let arr = [];
+    // for (let i = 0; i <p 20; i++) {
+    //   arr.push(<p>Halo dunia</p>);
+    // }
+    // return arr;
+    return [...Array(20)].map((x) => <p>halo world</p>);
+  };
 
   return (
     <div>
@@ -92,6 +101,7 @@ function Basic() {
           </div>
         );
       })}
+      {ArrJos()}
       <h4>Hasil user dari jsonplaceholder</h4>
 
       {(() => {
