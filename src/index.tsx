@@ -8,7 +8,8 @@ import "./styles/App.scss";
 import "./styles/layout/flags/flags.css";
 import "./styles/layout/layout.scss";
 //for primereact
-import "primereact/resources/themes/saga-blue/theme.css";
+// import "primereact/resources/themes/saga-blue/theme.css";
+import "primereact/resources/themes/saga-green/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";

@@ -1,1 +1,9 @@
 //Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
+$menuDarkBgColorFirst: rgb(38, 45, 49);
+$menuDarkBgColorLast: rgb(19, 28, 33);
+$menuitemDarkHoverColor: #25d366;
+$menuitemDarkActiveColor: #25d366;
+$menuitemDarkActiveBgColor: rgb(50, 55, 57);
+$menuitemActiveRouteColor: #25d366;
+// $menuitemDarkActiveBgColor: rgb(42, 47, 50);
+$menuitemDarkBorderColor: rgba(241, 241, 242, 0.12);

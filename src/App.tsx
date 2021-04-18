@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
-// import { Route, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
 import AppConfig from "./components/AppConfig";
@@ -63,7 +63,7 @@ const Index = () => {
   const [ripple, setRipple] = useState(false);
   const sidebar = useRef();
 
-  // const history = useHistory();
+  const history = useHistory();
 
   let menuClick = false;
 
@@ -263,6 +263,11 @@ const Index = () => {
         window.location = "https://github.com/primefaces/sigma-react";
       },
     },
+    {
+      label: "About",
+      icon: "pi pi-fw pi-info-circle",
+      to: "/about",
+    },
   ];
 
   const addClass = (element, className) => {
@@ -298,8 +303,8 @@ const Index = () => {
 
   const logo =
     layoutColorMode === "dark"
-      ? "assets/layout/images/logo-white.svg"
-      : "assets/layout/images/logo.svg";
+      ? "assets/logo/logo-white.svg"
+      : "assets/logo/logo.svg";
 
   const wrapperClass = classNames("layout-wrapper", {
     "layout-overlay": layoutMode === "overlay",
@@ -336,9 +341,9 @@ const Index = () => {
           <div
             className="layout-logo"
             style={{ cursor: "pointer" }}
-            // onClick={() => history.push("/")}
+            onClick={() => history.push("/")}
           >
-            <img alt="Logo" src={logo} />
+            <img className="logo-img" alt="Logo" src={logo} />
           </div>
           {/* <AppProfile /> */}
           <AppMenu model={menu} onMenuItemClick={onMenuItemClick} />
